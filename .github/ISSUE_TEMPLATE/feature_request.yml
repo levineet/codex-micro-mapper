@@ -1,0 +1,16 @@
+name: Feature request / 功能建议
+description: Explain a problem you want the app to solve / 描述希望解决的问题
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / 使用场景与问题
+      description: What are you trying to do, and what is difficult today? / 你希望完成什么，目前哪里不方便？
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested behavior / 建议的行为
+      description: Include alternatives if helpful / 可补充替代方案

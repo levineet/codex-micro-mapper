@@ -1,0 +1,32 @@
+name: Bug report / 问题反馈
+description: Report unexpected behavior with a reproducible example / 反馈可复现的问题
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include private text, full mapping files or unredacted diagnostics. For vulnerabilities, read SECURITY.md. 请勿上传私人文字、完整映射或未脱敏诊断；漏洞请查看 SECURITY.md。"
+  - type: input
+    id: versions
+    attributes:
+      label: App and macOS version / 应用和系统版本
+      placeholder: "Mapper 1.8.1 (24), macOS 26, Apple silicon"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps and observed result / 复现步骤与实际结果
+      description: Include the physical key position and target app when relevant / 如有关，请注明实体键位和目标应用
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result / 预期结果
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context / 补充信息
+      description: Permission state, device firmware if known, and redacted screenshots or diagnostics / 权限状态、已知的固件版本及已脱敏的截图或诊断
