@@ -6,16 +6,18 @@
 
 让 Codex Micro 的**第一层（Layer 1）也能混用全局操作**。
 
-将键盘下方两排按键自定义为全局快捷键或应用操作，无需切换 Layer。
+上方按键继续快速访问对应的 Agent 任务，下方两排则可以自定义全局快捷键和应用操作。常用操作放在同一层，无需切换 Layer。
 
 [下载安装包](https://github.com/levineet/codex-micro-mapper/releases/latest) · macOS 14+ · Apple Silicon
 
 ![按键映射界面](docs/images/mappings-zh.jpg)
 
-## 可以设置什么
+## 可以这样用
 
-- **全局快捷键**：录制组合键，或选择单个按键，支持左右修饰键。
-- **应用操作**：打开、唤起、隐藏应用，或在激活后发送快捷键。
+- **唤起 Typeless**：将按键映射为 Typeless 的全局快捷键，快速调用语音输入。
+- **全局唤起 App**：打开或切到 Codex、ChatGPT Classic 或其他应用，也可设置为在前台时再次按下隐藏。
+
+快捷键支持录制，也可在应用激活后追加快捷键。
 
 ## 开始使用
 

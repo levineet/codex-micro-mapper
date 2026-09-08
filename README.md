@@ -6,16 +6,18 @@
 
 Mix global shortcuts and app actions on **Layer 1 of Codex Micro**.
 
-Customize the keyboard’s bottom two rows without switching layers.
+Keep the upper keys for quick access to their assigned Agent tasks, and customize the bottom two rows with global shortcuts and app actions. Use both on the same layer, without switching layers.
 
 [Download](https://github.com/levineet/codex-micro-mapper/releases/latest) · macOS 14+ · Apple Silicon
 
 ![Mappings interface, shown in Simplified Chinese](docs/images/mappings-zh.jpg)
 
-## What you can assign
+## Put it to use
 
-- **Global shortcuts**: record a key combination or choose a single key, including left and right modifiers.
-- **App actions**: open, activate or hide an app, or send a shortcut after activating it.
+- **Trigger Typeless**: assign its global shortcut to a key for quick access to voice input.
+- **Open apps from anywhere**: open or switch to Codex, ChatGPT Classic, or another app. Optionally, press again while the app is in front to hide it.
+
+Record shortcuts directly, or send a shortcut after an app activates.
 
 ## Get started
 
