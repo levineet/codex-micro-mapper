@@ -1,0 +1,26 @@
+# Build products and local tooling
+.build/
+.swiftpm/
+outputs/
+DerivedData/
+.DS_Store
+*.xcuserstate
+xcuserdata/
+.idea/
+.vscode/
+
+# Local signing material and configuration
+.env
+.env.*
+*.p12
+*.p8
+*.keychain-db
+*.mobileprovision
+*.provisionprofile
+
+# Never commit runtime data, personal diagnostics or local audit captures
+mappings.json
+instance.lock
+*.log
+work/
+Design/
