@@ -1,0 +1,47 @@
+name: Build and test
+
+'on':
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  macos:
+    runs-on: macos-26
+    timeout-minutes: 20
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.0.1.app/Contents/Developer
+      CODEX_MICRO_MAPPER_BUILD_PATH: /private/tmp/codex-micro-mapper-ci-build
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Verify toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+          test "$(uname -m)" = arm64
+
+      - name: Test
+        run: swift test --disable-sandbox --scratch-path "$CODEX_MICRO_MAPPER_BUILD_PATH" --arch arm64
+
+      - name: Build app archive
+        run: bash scripts/build-app.sh
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: codex-micro-mapper-arm64
+          path: outputs/Codex Micro Mapper.zip
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 0
